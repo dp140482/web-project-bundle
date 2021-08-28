@@ -1,0 +1,15 @@
+.header-block {
+    display: flex;
+}
+
+.coheader {
+    color: darkgray;
+    font-weight: bold;
+    font-size: 1.17em;
+    margin: 1em;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em;
+}
