@@ -25,7 +25,10 @@ function startTimer(event) {
     const endTime = DateTime.local().plus(durationFromTimeInput(Timer));
     inervID = setInterval(() => {
         Timer.value = timeInterval(DateTime.local(), endTime);
-        if (Timer.value == '00:00:00') stopTimer(event);
+        if (Timer.value == '00:00:00') {
+            stopTimer(event);
+            document.getElementById('audio').play();
+        }
     }, 100);
 }
 
