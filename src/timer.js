@@ -23,16 +23,18 @@ function startTimer(event) {
     event.preventDefault();
     const Timer = document.querySelector('input[name="timer"]');
     const endTime = DateTime.local().plus(durationFromTimeInput(Timer));
-    inervID = setInterval(() => {
+    if (!inervID) inervID = setInterval(() => {
         Timer.value = timeInterval(DateTime.local(), endTime);
         if (Timer.value == '00:00:00') {
             stopTimer(event);
             document.getElementById('audio').play();
         }
     }, 100);
+
 }
 
 function stopTimer(event) {
     event.preventDefault();
     clearInterval(inervID);
+    inervID = undefined;
 }
