@@ -1,6 +1,7 @@
 const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/main.js',
@@ -11,7 +12,13 @@ module.exports = {
     module: {
         rules: [{
             test: /\.(sa|sc|c)ss$/,
-            use: ['style-loader', 'css-loader', 'sass-loader']
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        }, {
+            test: /\.mp3$/,
+            loader: 'file-loader',
+            options: {
+                name: '[path][name].[ext]'
+            }
         }]
     },
     plugins: [
@@ -19,7 +26,12 @@ module.exports = {
             template: resolve(__dirname, 'index.html')
         }),
         new MiniCssExtractPlugin({
-            filename: 'minstyle.bundle.css'
+            filename: '[name].bundle.css'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'media', to: 'media' }
+            ]
         })
     ]
 }

@@ -20,7 +20,9 @@
     },
     "homepage": "https://github.com/dp140482/web-project-bundle#readme",
     "devDependencies": {
+        "copy-webpack-plugin": "^9.0.1",
         "css-loader": "^6.2.0",
+        "file-loader": "^6.2.0",
         "mini-css-extract-plugin": "^2.2.2",
         "sass": "^1.39.0",
         "sass-loader": "^12.1.0",
