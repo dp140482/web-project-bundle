@@ -1,4 +1,4 @@
-import { DateTime } from "./luxon.js";
+import { DateTime } from "luxon";
 const sound = new Audio('../media/Door-knock-sound-effect.mp3');
 
 const startBtn = document.getElementById('start');
