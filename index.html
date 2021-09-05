@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Суперприложение: дата и время</title>
-    <script src="./src/main.js" type="module"></script>
 </head>
 
 <body>
     <form id="datecalc">
-        <h3>Калькулятор дат</h3>
+        <div class="header-block">
+            <h3>Калькулятор дат</h3>
+            <div class="coheader">Таймер</div>
+        </div>
         <label>
             <strong>Первая дата:</strong>
             <input type="date" name="firstDate" />
@@ -21,6 +23,16 @@
         </label>
         <button type="submit">Расчитать промежуток</button>
         <p id="datecalc__result"></p>
+    </form>
+
+    <form id="timer" style="display: none;">
+        <div class="header-block">
+            <div class="coheader">Калькулятор дат</div>
+            <h3>Таймер</h3>
+        </div>
+        <input type="time" name="timer" step="1" />
+        <button id="start">Старт</button>
+        <button id="stop">Стоп</button>
     </form>
 </body>
 

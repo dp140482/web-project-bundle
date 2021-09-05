@@ -1,0 +1,38 @@
+{
+    "name": "web-project-bundle",
+    "version": "1.0.0",
+    "description": "web-project-bundle",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "webpack --mode=development",
+        "build": "webpack --mode=production"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dp140482/web-project-bundle.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dp140482/web-project-bundle/issues"
+    },
+    "homepage": "https://github.com/dp140482/web-project-bundle#readme",
+    "devDependencies": {
+        "copy-webpack-plugin": "^9.0.1",
+        "css-loader": "^6.2.0",
+        "file-loader": "^6.2.0",
+        "luxon": "^2.0.2",
+        "mini-css-extract-plugin": "^2.2.2",
+        "sass": "^1.39.0",
+        "sass-loader": "^12.1.0",
+        "style-loader": "^3.2.1",
+        "webpack": "^5.52.0",
+        "webpack-bundle-analyzer": "^4.4.2",
+        "webpack-cli": "^4.8.0"
+    },
+    "dependencies": {
+        "html-webpack-plugin": "^5.3.2"
+    }
+}
