@@ -1,4 +1,5 @@
-import { DateTime, Duration } from "./luxon.js";
+import { DateTime } from "luxon";
+const sound = new Audio('../media/Door-knock-sound-effect.mp3');
 
 const startBtn = document.getElementById('start');
 startBtn.addEventListener('click', startTimer);
@@ -27,7 +28,7 @@ function startTimer(event) {
         Timer.value = timeInterval(DateTime.local(), endTime);
         if (Timer.value == '00:00:00') {
             stopTimer(event);
-            document.getElementById('audio').play();
+            sound.play();
         }
     }, 100);
 
